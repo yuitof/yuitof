@@ -1,0 +1,23 @@
+{
+  "name": "yuitof",
+  "version": "1.0.0",
+  "description": "<!-- **yuitof/yuitof** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.",
+  "homepage": "https://github.com/yuitof/yuitof#readme",
+  "bugs": {
+    "url": "https://github.com/yuitof/yuitof/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuitof/yuitof.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
