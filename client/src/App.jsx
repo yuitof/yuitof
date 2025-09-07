@@ -1,9 +1,14 @@
 import ContactForm from "./components/ContactForm.jsx";
+import Bio from "./components/Bio.jsx";
 
 function App() {
 
   return (
-    <ContactForm />
+    <>
+      <Bio />
+      <ContactForm />
+      <p>&copy; All Rights Reserved</p>
+    </>
   );
 }
 
