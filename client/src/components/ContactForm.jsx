@@ -1,13 +1,15 @@
 import { useState } from 'react';
 
-const url =  "http://localhost:3000/api"
+const url =  "http://localhost:3001/api"
 
 export default function ContactForm() {
     const emptyForm = {
-        message: '',
-        email: '',
-        firstname: '',
-        lastname: '',
+        form: {
+            message: '',
+            email: '',
+            firstname: '',
+            lastname: '',
+        }
     }
     const [formData, setForm] = useState(emptyForm);
 
@@ -31,34 +33,42 @@ export default function ContactForm() {
         }}>
             <textarea
                 placeholder="Message"
-                value={formData.message}
+                value={formData.form.message}
                 onChange={e => setForm(prevFormData => ({
-                    ...prevFormData,
-                    message: e.target.value
+                    form: {
+                        ...prevFormData.form,
+                        message: e.target.value
+                    }
                 }))}
             />
             <textarea
                 placeholder="Email"
-                value={formData.email}
+                value={formData.form.email}
                 onChange={e => setForm(prevFormData => ({
-                    ...prevFormData,
-                    email: e.target.value
+                    form: {
+                        ...prevFormData.form,
+                        email: e.target.value
+                    }
                 }))}
             />
             <textarea
                 placeholder="First Name"
-                value={formData.firstname}
+                value={formData.form.firstname}
                 onChange={e => setForm(prevFormData => ({
-                    ...prevFormData,
-                    firstname: e.target.value
+                    form: {
+                        ...prevFormData.form,
+                        firstname: e.target.value
+                    }
                 }))}
             />
             <textarea
                 placeholder="Last Name"
-                value={formData.lastname}
+                value={formData.form.lastname}
                 onChange={e => setForm(prevFormData => ({
-                    ...prevFormData,
-                    lastname: e.target.value
+                    form: {
+                        ...prevFormData.form,
+                        lastname: e.target.value
+                    }
                 }))}
             />
             <button type="submit">Send</button>
