@@ -5,6 +5,7 @@ async function sendEmail(data) {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
+            "Authorization": "Bearer secret"
         },
         body: JSON.stringify(data),
     });
