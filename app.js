@@ -11,8 +11,8 @@ app.get("/", (req, res, next) => {
   return res.status(200).sendFile(path.join(__dirname, 'client/dist', 'index.html'));
 });
 
-app.post("/api", (req, res, next) => {
-  api.sendEmail(req.body);
+app.post("/api", async (req, res, next) => {
+  await api.sendEmail(req.body);
   return res.status(200);
 })
 
