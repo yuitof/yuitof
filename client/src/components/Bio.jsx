@@ -2,7 +2,7 @@ export default function Bio() {
     return (
         <>
             <h2>📸Profile</h2>
-            <img src="https://i.imgur.com/MK3eW3Am.jpg" alt="Katherine Johnson"/>
+            <img src="https://aws-node-express-api-project-610040096594.s3.us-east-1.amazonaws.com/profile.jpg" alt="" />
             <h2>🧑‍💻Skills</h2>
             <h3>CGI</h3>
             <ul>
