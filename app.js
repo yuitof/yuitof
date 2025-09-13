@@ -1,27 +1,25 @@
-require('dotenv').config()
+const api = require('./api.js')
 
-const api = require('./api.js');
-
-const express = require('express');
+const serverless = require("serverless-http");
+const express = require("express");
 const path = require('path');
-
 const app = express();
-const port = process.env.PORT;
 
-app.use(express.json());
 app.use(express.static(path.join(__dirname, 'client/dist')));
 
-app.post('/api', (req, res) => {
-  res.json({ status: 200 });
-  console.log(req.body);
+app.get("/", (req, res, next) => {
+  return res.status(200).sendFile(path.join(__dirname, 'client/dist', 'index.html'));
+});
 
+app.post("/api", (req, res, next) => {
   api.sendEmail(req.body);
+  return res.status(200);
 })
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/dist', 'index.html'));
+app.use((req, res, next) => {
+  return res.status(404).json({
+    error: "Not Found",
+  });
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+exports.handler = serverless(app);

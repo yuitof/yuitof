@@ -1,6 +1,6 @@
 {
-  "name": "yuitof",
-  "version": "1.0.0",
+  "name": "aws-node-express-api-project",
+  "version": "2.0.0",
   "description": "<!-- **yuitof/yuitof** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.",
   "homepage": "https://github.com/yuitof/yuitof#readme",
   "bugs": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/yuitof/yuitof.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "author": "",
   "type": "commonjs",
   "main": "app.js",
@@ -20,7 +20,8 @@
     "dev": "nodemon app"
   },
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^4.19.2",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "dotenv": "^17.2.2",

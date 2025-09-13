@@ -1,6 +1,6 @@
-const url = 'http://localhost:3000/forms'
+const url = process.env.API_URL
 
-async function sendEmail(data) {
+exports.sendEmail = async data => {
     const result = await fetch(url, {
         method: "POST",
         headers: {
@@ -11,5 +11,3 @@ async function sendEmail(data) {
     });
     console.log(result);
 }
-
-module.exports = { sendEmail };
