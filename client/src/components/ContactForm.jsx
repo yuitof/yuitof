@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const url =  "https://yuitof.com/api";
+const url =  "https://www.yuitof.com/api";
 
 export default function ContactForm() {
     const emptyForm = {
