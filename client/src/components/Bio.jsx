@@ -11,9 +11,10 @@ export default function Bio() {
             </ul>
             <h3>Development</h3>
             <ul>
-                <li>Ruby on Rails</li>
                 <li>JavaScript</li>
-                <li>React.js</li>
+                <li>Node.js</li>
+                <li>React</li>
+                <li>Ruby on Rails</li>
             </ul>
         </>
     );
