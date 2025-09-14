@@ -6,6 +6,7 @@ function App() {
   return (
     <>
       <Bio />
+      <ContactForm />
       <p>&copy; All Rights Reserved</p>
     </>
   );
