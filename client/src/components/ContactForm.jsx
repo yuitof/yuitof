@@ -4,13 +4,11 @@ const url =  "https://www.yuitof.com/api";
 
 export default function ContactForm() {
     const emptyForm = {
-        form: {
-            message: '',
-            email: '',
-            firstname: '',
-            lastname: '',
-        }
-    }
+        message: '',
+        email: '',
+        firstname: '',
+        lastname: '',
+    };
     const [formData, setForm] = useState(emptyForm);
 
     async function sendMessage(formData) {
@@ -22,6 +20,10 @@ export default function ContactForm() {
                 },
                 body: JSON.stringify(formData),
             });
+            
+            if (!response.ok) {
+                throw new Error("Error occurred while sending the email.")
+            }
             const result = await response.json();
             console.log(result);
         } catch (error) {
@@ -37,42 +39,34 @@ export default function ContactForm() {
         }}>
             <textarea
                 placeholder="Message"
-                value={formData.form.message}
+                value={formData.message}
                 onChange={e => setForm(prevFormData => ({
-                    form: {
-                        ...prevFormData.form,
+                        ...prevFormData,
                         message: e.target.value
-                    }
                 }))}
             />
             <textarea
                 placeholder="Email"
-                value={formData.form.email}
+                value={formData.email}
                 onChange={e => setForm(prevFormData => ({
-                    form: {
-                        ...prevFormData.form,
+                        ...prevFormData,
                         email: e.target.value
-                    }
                 }))}
             />
             <textarea
                 placeholder="First Name"
-                value={formData.form.firstname}
+                value={formData.firstname}
                 onChange={e => setForm(prevFormData => ({
-                    form: {
-                        ...prevFormData.form,
+                        ...prevFormData,
                         firstname: e.target.value
-                    }
                 }))}
             />
             <textarea
                 placeholder="Last Name"
-                value={formData.form.lastname}
+                value={formData.lastname}
                 onChange={e => setForm(prevFormData => ({
-                    form: {
-                        ...prevFormData.form,
+                        ...prevFormData,
                         lastname: e.target.value
-                    }
                 }))}
             />
             <button type="submit">Send</button>

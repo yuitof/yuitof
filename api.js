@@ -2,7 +2,7 @@ const url = process.env.API_URL
 
 exports.sendEmail = async data => {
     try {
-        const result = await fetch(url, {
+        const response = await fetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -10,8 +10,12 @@ exports.sendEmail = async data => {
             },
             body: JSON.stringify(data),
         });
-        return result;
+
+        if (!response.ok) {
+            throw new Error("Internal server error")
+        }
+        return await response.json();
     } catch (error) {
-        return error;
+        throw new Error();
     }
 }

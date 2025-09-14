@@ -17,7 +17,7 @@ app.post("/api", async (req, res, next) => {
     const result = await api.sendEmail(req.body);
     return res.status(200).json({ message: "Request processed successfully." });
   } catch (error) {
-    next(error);
+    return res.status(500).json({name: 'Error', message: 'Internal server error'});
   }
 })
 
