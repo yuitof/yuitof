@@ -10,9 +10,8 @@ exports.sendEmail = async data => {
             },
             body: JSON.stringify(data),
         });
-        console.log(result);
         return result;
     } catch (error) {
-        throw new Error('Failed to send email. (in my application)');
+        return error;
     }
 }
