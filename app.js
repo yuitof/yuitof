@@ -12,6 +12,10 @@ app.get("/", (req, res, next) => {
   return res.status(200).sendFile(path.join(__dirname, 'client/dist', 'index.html'));
 });
 
+app.get("/contact", (req, res, next) => {
+  return res.status(200).sendFile(path.join(__dirname, 'client/dist', 'index.html'));
+})
+
 app.post("/api", async (req, res, next) => {
   try {
     const result = await api.sendEmail(req.body);
