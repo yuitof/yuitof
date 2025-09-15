@@ -2,17 +2,17 @@ import Footer from "./Footer.jsx";
 
 export default function Bio({state}) {
 
-    let form = <></>;
+    let alert = <></>;
 
     if (state.value == "fulfilled") {
-        form =  <div className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+        alert =  <div className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
                     <span className="font-medium">Your form has been submitted successfully!🥳</span>
                 </div>
     }
 
     return (
         <>
-            {form}
+            {alert}
             <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8 h-screen w-screen">
             <div className="text-center">
                 <h1 className="mt-4 text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">Yuito Fujiwara</h1>
