@@ -1,8 +1,7 @@
 const url = process.env.API_URL
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 exports.sendEmail = async data => {
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
     try {
         if (!emailRegex.test(data.email)) {
             throw new Error("Invalid email address");
