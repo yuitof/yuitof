@@ -5,8 +5,8 @@ export default function Bio({state}) {
     let alert = <></>;
 
     if (state.value == "fulfilled") {
-        alert =  <div className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
-                    <span className="font-medium">Your form has been submitted successfully!🥳</span>
+        alert =  <div className="p-4 mb-4 text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 fixed top-0 left-0 right-0" role="alert">
+                    <span className="font-medium text-sm block sm:inline">Your form has been submitted successfully!</span> <span className="text-xs block sm:inline">We’ve sent you a confirmation email. Please check your inbox.</span>
                 </div>
     }
 

@@ -60,8 +60,8 @@ export default function ContactForm({state}) {
     let alert = <></>
 
     if (state.value == "rejected") {
-        alert =  <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
-                    <span className="font-medium">Operation failed. Please try again.</span>
+        alert =  <div className="p-4 mb-4 text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400 fixed top-0 left-0 right-0" role="alert">
+                    <span className="font-medium text-sm block sm:inline">Operation failed. Please try again.</span>
                 </div>
     };
 
