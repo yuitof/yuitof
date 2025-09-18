@@ -11,7 +11,7 @@ exports.sendEmail = async data => {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Basic ${process.env.API_KEY}`
+                "Authorization": `Bearer ${process.env.API_KEY}`
             },
             body: JSON.stringify(data),
         });
