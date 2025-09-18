@@ -20,7 +20,9 @@
     "dev": "nodemon app"
   },
   "dependencies": {
+    "@sparticuz/chromium": "^138.0.2",
     "express": "^4.19.2",
+    "puppeteer-core": "^24.20.0",
     "serverless-http": "^3.2.0"
   },
   "devDependencies": {
