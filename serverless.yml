@@ -14,4 +14,10 @@ functions:
   api:
     handler: app.handler
     events:
-      - httpApi: "*"
+      - http:
+          method: any
+          path: /
+
+      - http:
+          method: any
+          path: "{proxy+}"
