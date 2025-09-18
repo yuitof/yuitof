@@ -41,6 +41,10 @@ export default function ContactForm({state}) {
     }
 
     useEffect(() => {
+        document.title = 'Yuito Fujiwara - contact';
+    }, []);
+
+    useEffect(() => {
         const forms = document.getElementsByTagName('button');
         const fields = Array.from(forms);
         switch (state.value) {
